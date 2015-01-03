@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GildedRose.Console
+namespace GildedRose.Console.Rules
 {
     public class ConjuredUpdateQualityRule : UpdateQualityRuleBase
     {
