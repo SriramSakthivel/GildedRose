@@ -4,28 +4,28 @@ using NUnit.Framework;
 namespace GildedRose.Tests
 {
     [TestFixture]
-    public class RegularItemTests
+    public class ConjuredItemTests
     {
-        private const string ItemName = "RegularItem";
+        private const string ItemName = "Conjured";
 
         [Test]
-        public void DegradeQualityByOneWhenSellInAvailable()
+        public void DegradeQualityByTwoWhenSellInAvailable()
         {
             Item item = new Item() { Name = ItemName, Quality = 10, SellIn = 5 };
             var qualityUpdater = new ItemQualityUpdater(new[] { item });
             qualityUpdater.UpdateQuality();
 
-            Assert.AreEqual(9, item.Quality);
+            Assert.AreEqual(8, item.Quality);
         }
 
         [Test]
-        public void DegradeQualityByTwoWhenSellInPassed()
+        public void DegradeQualityTwiceWhenSellInPassed()
         {
             Item item = new Item() { Name = ItemName, Quality = 10, SellIn = 0 };
             var qualityUpdater = new ItemQualityUpdater(new[] { item });
             qualityUpdater.UpdateQuality();
 
-            Assert.AreEqual(8, item.Quality);
+            Assert.AreEqual(6, item.Quality);
         }
 
         [Test]

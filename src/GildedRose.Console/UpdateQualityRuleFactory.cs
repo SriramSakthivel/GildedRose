@@ -12,6 +12,8 @@
                     return new BackstagePassesUpdateQualityRule(item);
                 case "Sulfuras, Hand of Ragnaros":
                     return new SulfurasUpdateQualityRule(item);
+                case "Conjured":
+                    return new ConjuredUpdateQualityRule(item);
                 default:
                     return new RegularUpdateQualityRule(item);
             }
