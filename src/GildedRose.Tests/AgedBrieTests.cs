@@ -15,7 +15,7 @@ namespace GildedRose.Tests
             var qualityUpdater = new ItemQualityUpdater(new[] { item });
             qualityUpdater.UpdateQuality();
 
-            Assert.GreaterOrEqual(item.Quality, 11);
+            Assert.AreEqual(item.Quality, 11);
         }
 
         [Test]

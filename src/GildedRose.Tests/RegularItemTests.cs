@@ -10,7 +10,7 @@ namespace GildedRose.Tests
     [TestFixture]
     public class RegularItemTests
     {
-        private const string ItemName = "SomeItem";
+        private const string ItemName = "RegularItem";
 
         [Test]
         public void DegradeQualityTwiceWhenSellInPassed()

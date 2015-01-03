@@ -11,17 +11,17 @@ namespace GildedRose.Tests
         [Test]
         public void ShouldNeverDecreaseQuality()
         {
-            Item item = new Item() { Name = ItemName, Quality = 10, SellIn = 10 };
+            Item item = new Item() { Name = ItemName, Quality = 80, SellIn = 10 };
             var qualityUpdater = new ItemQualityUpdater(new[] { item });
             qualityUpdater.UpdateQuality();
 
-            Assert.AreEqual(10, item.Quality);
+            Assert.AreEqual(80, item.Quality);
         } 
         
         [Test]
         public void ShouldNeverDecreaseSellIn()
         {
-            Item item = new Item() { Name = ItemName, Quality = 10, SellIn = 10 };
+            Item item = new Item() { Name = ItemName, Quality = 80, SellIn = 10 };
             var qualityUpdater = new ItemQualityUpdater(new[] { item });
             qualityUpdater.UpdateQuality();
 
